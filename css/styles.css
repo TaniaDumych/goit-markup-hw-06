@@ -16,7 +16,7 @@ a {
 text-decoration: none;
 }
 button {
-    border: none;
+ border: none;
 } 
 img {
 display: block;
@@ -25,12 +25,27 @@ height: auto;
 
 }
 .container {
-max-width: 1158px;
-padding-left: 15px;
-padding-right: 15px;
-margin-left:  auto;
-margin-right: auto;
+max-width: 320px;
+padding: 0 16px;
+margin: 0 auto;
 }
+@media screen and (min-width: 1158px) {
+.container {
+ max-width: 1158px;
+padding: 0 15px;
+}
+}
+.section {
+ padding-top: 96px;
+padding-bottom: 96px;
+}
+@media screen and (min-width: 1158px) {
+.section {
+padding-top: 120px;
+ padding-bottom: 120px;
+}
+}
+
 .page-header {
  border-bottom: 1px solid #e7e9fc;
  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
@@ -135,9 +150,9 @@ color: #404BBF;
 color: #404BBF;
 }
 .hero-image {
-padding: 188px 0 188px;
-align-items: center;
-max-width: 1440px;
+max-width: 320px;
+padding-top: 72px;
+padding-bottom: 72px;
 background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/background/people-office.jpg);
 background-repeat: no-repeat;
 background-position: center;
@@ -145,11 +160,20 @@ background-size: cover;
 margin-left: auto;
 margin-right: auto;
 }
+@media screen and (min-device-pixel-ratio: 2),
+screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx) {
+.hero {
+background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)), url(../images/background/people-office.jpg);
+}
+}
 .hero-container {
-display: block;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .hero-title {
-max-width: 496px;
+max-width: 216px;
 font-family: "Roboto", sans-serif;
 font-weight: 700;
 font-size: 56px; 
@@ -157,19 +181,15 @@ line-height: 1.07;
 letter-spacing: 0.02em;
 text-align: center;
 color: #ffffff;
-margin-bottom: 48px;
-margin-left: auto;
-margin-right: auto;
+margin-bottom: 72px;
 }
 .order-button {
 background: #4d5ae5;
 display: block;
 border: none;
 border-radius: 4px;
-margin-top: 45px;
 height: 56px;
-margin-left: auto;
-margin-right: auto;
+margin: 0 auto;
 min-width: 169px;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -193,7 +213,9 @@ background-color: #404BBF;
 cursor: pointer;
 }
 .opportunities-class  {
-padding: 120px 0 120px;
+margin-top: 96px;
+
+
 }
 .visually-hidden:not(:focus):not(:active) {
 position: absolute;
@@ -208,7 +230,7 @@ clip: rect(0 0 0 0);
 overflow: hidden;
 }
 .opportunities-icons-container {
-display: flex;
+display: none;
 height: 112px;
 border: 1px solid #8e8f99;
 border-radius: 4px;
@@ -224,33 +246,35 @@ fill: none;
 .name-opportunities {
 gap: 24px;
 display: flex;
+flex-direction: column;
+text-align: center;
 }
 .opportunities-lists {
-width: calc((100% - 72px) / 4);
+
 }
 .opportunities-section {
 font-family: "Roboto", sans-serif;
 background-color: #ffffff;
-font-weight: 500;
-font-size: 20px;
+font-weight: 700;
+font-size: 36px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: #2e2f42;
-margin-bottom: 8px;
 }
 .opportunities-text {
 font-family: "Roboto", sans-serif;
 background-color: #ffffff;
-font-weight: 400;
+font-weight: 500;
 font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
+margin-top: 8px;
+ margin-bottom: 72px;
+ text-align: left;
 }
 .team {
 background-color: #f4f4fd;
-padding: 120px 0;
-margin: 0;
 
 }
 .container-team {
@@ -266,16 +290,19 @@ letter-spacing: 0.02em;
 color: #2e2f42;
 text-transform: capitalize;
 margin-bottom: 72px;
+margin-top: 96px;
 }
 .team-section {
 display: flex;
-gap: 24px;
-flex-wrap: wrap;
+gap: 72px;
+flex-direction: column;
+margin-top: 72px;
+margin-bottom: 96px;
+
 }
 .team-list {
 background-color: #ffffff;
 box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-flex-basis: calc((100% - 72px) / 4);
 border-radius: 0 0 4px 4px;
 }
 .team-team{
@@ -291,6 +318,7 @@ letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
 background-color: #ffffff;
+margin-top: 32px;
 margin-bottom: 8px;
 }
 .team-profession {
@@ -569,7 +597,6 @@ background: #404bbf;
 display: flex;
 align-items: center;
 justify-content: center;
-opacity: 1;
 position: fixed;
 top: 0;
 left: 0;
@@ -579,8 +606,6 @@ z-index: 999;
 background-color: rgba(46, 47, 66, 0.4);
 pointer-events: auto;
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-overlay {
 opacity: 0;
 visibility: hidden;
 pointer-events: none;
