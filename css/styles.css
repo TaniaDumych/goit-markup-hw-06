@@ -255,7 +255,7 @@ pointer-events: none;
 }
 
 .mobile-menu{
-opacity: 1;
+opacity: ;
 visibility: visible;
 pointer-events: auto;
 }
@@ -615,6 +615,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
+max-width: 320px;
 }
 .name-section {
 font-weight: 700;
@@ -629,7 +630,6 @@ margin-bottom: 72px;
 display: flex;
 flex-direction: column;
 gap: 72px;
-padding-bottom: 96px;
 }
 .team-list {
 background-color: #ffffff;
@@ -695,6 +695,7 @@ fill: #fff;
 .team {
 padding-top:  96px;
 padding-bottom: 96px;
+display: flex;
 }
 .container-team {
 max-width: 768px;
@@ -711,6 +712,7 @@ background-color: #FFFFFF;
 max-width: 264px;
 border-radius: 0px 0px 4px 4px;
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+width: calc((100% - 24px) / 2);
 }
 .icons-item-item:active {
  background-color: #404bbf;
@@ -898,7 +900,7 @@ color: #f4f4fd;
 font-size: 16px;
 line-height: 150%;
 letter-spacing: 0.02em;
-max-width: 264px;
+max-width: 100%;
 text-align: left;
 }
 .footer-right {
@@ -951,7 +953,10 @@ text-align: center;
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: center
+}
+.form-label-subscribe {
+margin-bottom: 16px;
 }
 .input-subscribe {
 border: 1px solid #FFFFFF;
@@ -995,25 +1000,33 @@ margin-left: 16px;
 background: #404bbf;
 }
 @media screen and (min-width: 768px) {
+.footer-page {
+padding-top: 96px;
+padding-bottom: 96px;
+}
 .footer-container {
+    max-width: 768px;
 flex-direction: row;
 flex-wrap: wrap;
-gap: 72px 24px;
-align-items: baseline;
-text-align: left;
-margin: 0;
+margin: 0 auto;
 justify-content: flex-start;
-margin-left: 108px;
+display: flex;
+padding-left: 108px;
+text-align: left;
 }
 .footer-left {
-margin: 0;
+margin-bottom: 72px;
+max-width: 264px;
+margin-right: 24px;
+
 }
 .footer-logo:active,
 .footer-accent:active {
  color: #4d5ae5;
 }
 .footer-right {
-margin: 0;
+margin-bottom: 104px;
+margin-left: 24px;
 }
 .social-footer {
 text-align: start;
@@ -1041,13 +1054,18 @@ background: #404bbf;
 }
 @media screen and (min-width: 1158px) {
 .footer-page {
-padding: 0;
+padding-top: 100px;
+padding-bottom: 100px;
+line-height: 1.6;
 }
 .footer-container {
 gap: 0;
-margin: 0;
-padding-top: 100px;
-padding-bottom: 100px;
+justify-content: center;
+max-width: 1158px;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-items: baseline;
 }
 .footer-logo-accent:hover,
 .footer-accent:focus {
@@ -1055,14 +1073,13 @@ color: #4d5ae5;
 }
 .footer-right {
 margin-left: 120px;
-}
-.footer-social:hover,
-.footer-social:focus {
- background-color: #31d0aa;
+margin-bottom: 0;
+min-width: 264px;
 }
 .subscribe {
 margin-left: 80px;
 }
+
 .button-subscribe:hover,
 .button-subscribe:focus {
  background: #404bbf;
@@ -1083,7 +1100,7 @@ background-color: rgba(46, 47, 66, 0.4);
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay {
-opacity: 1;
+opacity: ;
 visibility: visible;
 pointer-events: auto;
 }
