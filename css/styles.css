@@ -255,7 +255,7 @@ pointer-events: none;
 }
 
 .mobile-menu{
-opacity: ;
+opacity: 1;
 visibility: visible;
 pointer-events: auto;
 }
@@ -352,6 +352,7 @@ fill: #ffffff;
 display: none;
 }
 }
+/*section*/
 .hero-image  {
 background-color: #2E2F42;
  background-image: linear-gradient(180deg, rgba(46, 47, 66, 0.7) 0%, rgba(117, 120, 168, 0.7) 100%), url(../images/mobile/Dark-bg@2x.jpg);
@@ -449,13 +450,13 @@ cursor: pointer;
 .hero-image {
 background-image: linear-gradient(rgba(46, 47, 66, 0.7),rgba(46, 47, 66, 0.7)),url(../images/background/people-office\ 1@1x\ \(1\).jpg);
 background-color: #2e2f42;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+max-width: 1440px;
+margin: 0 auto;
+ padding-top: 188px;
+padding-bottom: 188px;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
  @media screen and (min-device-pixel-ratio: 2),
  screen and (min-resolution: 192dpi),
@@ -491,8 +492,7 @@ cursor: pointer;
 }
 }
 .opportunities-class {
-padding-top: 96px;
-padding-bottom: 96px;
+padding: 96px 16px;
 }
 .name-opportunities {
 gap: 72px;
@@ -527,8 +527,7 @@ display: none;
 }
 @media screen and (min-width: 768px) {
 .opportunities-class {
-padding-top: 96px;
-padding-bottom: 96px;
+padding: 96px 16px;
 }
 .container {
 max-width: 768px;
@@ -563,8 +562,7 @@ text-align: left;
 }
 @media screen and (min-width: 1158px) {
 .opportunities-class {
-padding-top: 96px;
-padding-bottom: 96px;
+padding: 120px 0;
 }
 .container {
 max-width: 1158px;
@@ -606,8 +604,7 @@ font-weight: 400;
 }
  .team {
 background: #f4f4fd;
-padding-top: 96px;
-padding-bottom: 96px;
+padding: 96px 28px;
  }
  .container-team {
 display: flex;
@@ -693,8 +690,6 @@ fill: #fff;
 }
 @media screen and (min-width: 768px) {
 .team {
-padding-top:  96px;
-padding-bottom: 96px;
 display: flex;
 }
 .container-team {
@@ -723,6 +718,8 @@ width: calc((100% - 24px) / 2);
 max-width: 1158px;
 padding: 0 15px;
 background: rgb(244, 244, 253);
+padding-top: 120px;
+padding-bottom: 120px;
 }
 .team-list {
 flex-basis: calc((100% - 72px) / 4);
@@ -870,9 +867,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 text-align: center;
-}
-.footer-left {
-margin-bottom: 72px;
+gap: 72px;
 }
 .footer-logo {
 font-family: 'Raleway', sans-serif;
@@ -902,9 +897,6 @@ line-height: 150%;
 letter-spacing: 0.02em;
 max-width: 100%;
 text-align: left;
-}
-.footer-right {
-margin-bottom: 72px;
 }
 .social-footer {
 font-weight: 500;
@@ -1005,28 +997,23 @@ padding-top: 96px;
 padding-bottom: 96px;
 }
 .footer-container {
-    max-width: 768px;
+max-width: 768px;
 flex-direction: row;
 flex-wrap: wrap;
 margin: 0 auto;
 justify-content: flex-start;
 display: flex;
-padding-left: 108px;
 text-align: left;
+padding: 0 108px;
+gap: 72px 24px;
 }
 .footer-left {
-margin-bottom: 72px;
 max-width: 264px;
-margin-right: 24px;
 
 }
 .footer-logo:active,
 .footer-accent:active {
  color: #4d5ae5;
-}
-.footer-right {
-margin-bottom: 104px;
-margin-left: 24px;
 }
 .social-footer {
 text-align: start;
@@ -1034,12 +1021,18 @@ text-align: start;
 .footer-social:active {
 background-color: #31d0aa;
 }
+.subscribe {
+margin-bottom: 0;
+}
 .subscribe-text {
 text-align: start;
 }
 .subscribe-email {
 flex-direction: row;
 align-items: flex-start;
+}
+.form-label-subscribe {
+margin-bottom: 0; 
 }
 .input-subscribe {
 max-width: 264px;
@@ -1054,32 +1047,26 @@ background: #404bbf;
 }
 @media screen and (min-width: 1158px) {
 .footer-page {
-padding-top: 100px;
-padding-bottom: 100px;
+padding: 100px 0;
 line-height: 1.6;
 }
 .footer-container {
-gap: 0;
-justify-content: center;
 max-width: 1158px;
-display: flex;
 flex-direction: row;
-flex-wrap: nowrap;
 align-items: baseline;
+margin-left: auto;
+margin-right: auto;
+flex-wrap: nowrap;
+gap: 120px 80px;
+padding: 0 15px;
 }
 .footer-logo-accent:hover,
 .footer-accent:focus {
 color: #4d5ae5;
 }
 .footer-right {
-margin-left: 120px;
 margin-bottom: 0;
-min-width: 264px;
 }
-.subscribe {
-margin-left: 80px;
-}
-
 .button-subscribe:hover,
 .button-subscribe:focus {
  background: #404bbf;
@@ -1100,7 +1087,7 @@ background-color: rgba(46, 47, 66, 0.4);
 transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-overlay {
-opacity: ;
+opacity: 1;
 visibility: visible;
 pointer-events: auto;
 }
